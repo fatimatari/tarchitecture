@@ -1,0 +1,100 @@
+
+@font-face {font-family: 'goudy'; src: url('/font/goudy.ttf') format('truetype');}
+@font-face {font-family: 'futura'; src: url('/font/futura.ttf') format('truetype');}
+@font-face {font-family: 'futura_light'; src: url('/font/futura_light.ttf') format('truetype');}
+
+html, body {display: block; height: 100%; width: 100%; margin: 0; padding: 0; background-color: #000;}
+a {cursor: pointer;}
+.clear {clear: both;}
+
+section {display: block; overflow: hidden; height: 100%; width: 100%;}
+.cross {position: absolute; z-index: 60; top: 30px; right: 30px; height: 50px; cursor: pointer;}
+
+/**nav *****************************************/
+
+nav {display: block; overflow: visible; height: 70px; position: absolute; z-index: 10; top: 0; right: 0; left: 0; background-color: rgba(255, 255, 255, 0.5);}
+nav #logo {float: left; margin: 25px; height: 20px; cursor: pointer;}
+nav a {float: right; margin: 20px 25px; width: 50px;}
+nav a span {display: block; width: 100%; float: right; margin: 5px auto; height: 5px; background-color: #fff; border-radius: 5px;}
+nav a span:nth-of-type(2) {width: 50%;}
+
+aside {display: block; overflow: hidden; width: 50%; position: fixed; z-index: 30; top: 0; right: -2000px; bottom: 0; background-color: rgba(255, 255, 255, 0.7);}
+aside a {display: block; padding: 30px 0 30px 40px; font-family: futura_light; font-size: 42px; color: #777; text-decoration: none; font-weight: lighter;}
+aside a img {width: 70px;}
+
+.subside {display: none;}
+.subside a {color: #fff;}
+
+#asidewrap {display: none; overflow: hidden; position: fixed; z-index: 20; top: 0; right: 0; left: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.5);}
+
+@media only screen and (max-width:700px){aside {width: 100%;}}
+
+/**home *****************************************/
+
+.home {background-image: url("/image/home.jpg"); background-position: center bottom; background-repeat: no-repeat; background-size: 100% auto;}
+
+.home_slogan h1 {display: block; width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: goudy; font-size: 72px; text-align: center; color: #fff; letter-spacing: -2px;}
+.home_slogan h1 small {display: block; margin-top: -10px; color: #777; font-size: 20px; font-family: futura; font-weight: bolder;}
+
+.home_footer {display: block; background-color: #000;}
+
+.home_footer p {display: block; box-sizing: border-box; padding: 100px 10px; margin: auto; color: #fff; font-size: 18px; font-family: futura_light; max-width: 960px; text-align: justify;}
+
+.home_footer div {display: block; overflow: visible; margin: auto; max-width: 960px;}
+.home_footer div a {position: relative; z-index: 2; display: inline-block; overflow: hidden; height: 150px; width: calc(25% - 20px); margin: 10px; transition: 0.5s; border-radius: 50px 50px 0 0;}
+.home_footer div a label {display: block; overflow: auto; position: absolute; z-index: 1; top: 50px; right: 0; left: 0; text-align: center; font-size: 54px; font-family: goudy; color: #fff;}
+.home_footer div a img {width: 100%; height: auto;}
+.home_footer div a:hover {height: 400px; margin-top: -300px;}
+
+@media only screen and (max-width:700px){
+.home {background-size: auto 100%;}
+.home_footer div a {width: calc(50% - 20px);}
+}
+
+/**project *****************************************/
+
+.project {height: auto;}
+.project h2 {display: block; margin: 150px 0 0; font-size: 128px; line-height: 96px; font-family: goudy; font-weight: lighter; letter-spacing: -2px; color: #fff; text-align: center;}
+.project p {display: block; padding: 30px; margin: 50px auto; max-width: 1000px;}
+.project h4 {display: block; margin: 10px 0 100px 15%; color: #fff; font-size: 32px; font-family: goudy;}
+.project h4 small {display: block; font-size: 16px;}
+.project section div {width: 100%; height: 400px; overflow: visible;}
+.project section div div {width: 5000px; height: 400px; padding-left: 10%; overflow: visible;}
+.project section div div img {margin: 0 15px; border: 0; transition: 0.5s;}
+.project section div div img:hover {transform: scale(1.2);}
+@media only screen and (max-width:700px){
+.project section div {overflow-x: scroll;}
+}
+
+/**about *****************************************/
+
+.about {display: none; position: fixed; z-index: 50; top: 0; right: 0; left: 0; bottom: 0;  background-color: #ede9e6;}
+.about img[src*="fatima"] {float: left; width: 30%;}
+.about .fleft {display: block; overflow: visible; float: left; width: 70%;}
+.about h2 {display: block; float: left; margin: 45px 0 0 -45px; font-size: 128px; font-family: goudy; font-weight: lighter; letter-spacing: -2px;}
+.about img[src*="line"] {float: right; width: calc(100% - 440px); margin-top: 75px;}
+.about p {display: block; overflow: auto; clear: both; min-height: 300px; padding: 10px; margin: 20px; border: 3px solid #000;}
+
+/**contact *****************************************/
+
+.contact {display: none; position: fixed; z-index: 50; top: 0; right: 0; left: 0; bottom: 0;  background-color: #000;}
+.contact h2 {display: block; float: left; margin: 45px 0 0 20%; font-size: 128px; font-family: goudy; font-weight: lighter; letter-spacing: -2px; color: #fff;}
+.contact img[src*="line"] {float: right; width: calc(100% - 900px); margin-top: 75px; filter: brightness(1)}
+.contact form {display: block; overflow: auto; width: 60%; margin: 0 20%;}
+.contact form div {display: block; overflow: auto; box-sizing: border-box; float: left; width: 50%; padding: 0 30px;}
+.contact form fieldset {display: block; padding: 10px; margin: 0; border: none;}
+.contact form fieldset label {display: block; padding: 10px 0; color: #fff; font-family: futura_light;}
+.contact form fieldset input, .contact form fieldset textarea {display: block; height: 50px; width: 100%; background-color: #555; border: none;}
+.contact form fieldset textarea {height: 160px;}
+.contact form button {display: block; float: right; padding: 10px 20px; margin: 5px; background-color: #6e9c9a; color: #fff; border-radius: 20px; font-weight: bolder; font-size: 18px; border: none; cursor: pointer;}
+
+/**footer *****************************************/
+
+footer {display: block; overflow: auto; padding: 10px 100px 10px 30px; background-color: #f1eeeb;}
+footer a {float:right;}
+footer a img {height: 50px;}
+footer a:nth-of-type(1) {margin-left: 3px;}
+footer label {display: block; float: left; padding: 15px 0;}
+
+
+
